@@ -12,6 +12,15 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        typeName: 'POST',
+        fieldName: 'post',
+        url:
+          'https://api-euwest.graphcms.com/v1/cjzwkqzyj1w1v01c282fd7loa/master'
+      }
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/`,

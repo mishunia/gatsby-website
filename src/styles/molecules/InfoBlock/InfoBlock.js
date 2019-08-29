@@ -32,11 +32,13 @@ const InfoBlockContentStyled = styled.div`
 
 const InfoBlockActionStyled = styled.div`
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   max-width: 560px;
 
-  ${Button}:not(:last-child) {
-    margin-right: 20px;
+  ${Button} {
+    margin-bottom: ${({ theme }) => theme.gutter.l};
+    margin-right: ${({ theme }) => theme.gutter.l};
   }
 `
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import {
   BlogItemStyled,
   BlogItemMediaStyled,
@@ -10,31 +11,51 @@ import {
 } from './styles'
 import Heading from '../../atoms/Heading/Heading'
 import Paragraph from '../../atoms/Paragraph/Paragraph'
+import { GridListItem } from '../../Styles'
 import { Link } from 'gatsby'
 
-const BlogItem = () => {
-  return (
-    <BlogItemStyled>
-      <BlogItemMediaStyled>
-        <img src="http://media.giphy.com/media/HqcbuVr2aUtMc/giphy.gif" />
-      </BlogItemMediaStyled>
-      <BlogItemContentStyled>
-        <BlogItemDateStyled>
-          <Paragraph p3>26.06.2019</Paragraph>
-        </BlogItemDateStyled>
-        <BlogItemTitleStyled>
-          <Heading h4>Blog post title</Heading>
-        </BlogItemTitleStyled>
-        <BlogItemDescStyled>
-          <Paragraph p3>
-            Desc of blog post. Desc of blog post. Desc of blog post. Desc of
-            blog post. Desc of blog post.
-          </Paragraph>
-        </BlogItemDescStyled>
-      </BlogItemContentStyled>
-      <BlogItemActionStyled to="/">Read more</BlogItemActionStyled>
-    </BlogItemStyled>
-  )
-}
+const BlogItem = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        post {
+          posts {
+            id
+            title
+            description
+            category
+            date
+            thumb
+          }
+        }
+      }
+    `}
+    render={({ post: { posts } }) => (
+      <>
+        {posts.map(post => (
+          <GridListItem>
+            <BlogItemStyled>
+              <BlogItemMediaStyled>
+                <img src={post.thumb} />
+              </BlogItemMediaStyled>
+              <BlogItemContentStyled>
+                <BlogItemDateStyled>
+                  <Paragraph p3>{post.date}</Paragraph>
+                </BlogItemDateStyled>
+                <BlogItemTitleStyled>
+                  <Heading h4>{post.title}</Heading>
+                </BlogItemTitleStyled>
+                <BlogItemDescStyled>
+                  <Paragraph p3>{post.description}</Paragraph>
+                </BlogItemDescStyled>
+              </BlogItemContentStyled>
+              <BlogItemActionStyled to="/">Read more</BlogItemActionStyled>
+            </BlogItemStyled>
+          </GridListItem>
+        ))}
+      </>
+    )}
+  />
+)
 
 export default BlogItem

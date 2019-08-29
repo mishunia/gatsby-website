@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { media } from '../../../_base/Media'
 
 const HeroStyled = styled.div`
   position: relative;
@@ -45,14 +46,14 @@ const HeroContainerStyled = styled.div`
 
 const HeroContainerInnerStyled = styled.div`
   max-width: ${props => props.theme.size.inner};
-  padding: 0 ${props => props.theme.gutter.l};
+
   width: 100%;
   height: 100%;
   margin: 0 auto;
 
   display: flex;
   align-items: center;
-  padding: 50px 0;
+  padding: 50px ${({ theme }) => theme.gutter.l};
 `
 
 const HeroContainerContentStyled = styled.div`

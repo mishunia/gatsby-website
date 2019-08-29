@@ -1,10 +1,15 @@
 import styled, { css } from 'styled-components'
+import { media } from '../../_base/Media'
 
-const Heading = styled.h1`
+const Heading = styled.h2`
   font-family: ${props => props.theme.fonts.base};
-  font-size: ${props => props.theme.fontSizes.xxxl};
+  font-size: ${props => props.theme.fontSizes.xxl};
   font-weight: ${props => props.theme.fontWeights.medium};
   line-height: ${props => props.theme.lineHeights.m};
+
+  @media ${media.tablet} {
+      font-size: ${props => props.theme.fontSizes.xxxl};
+  }
 
    /* align */
   ${({ center }) =>
@@ -26,6 +31,10 @@ const Heading = styled.h1`
     css`
       font-size: ${props => props.theme.fontSizes.xxl};
       font-weight: ${props => props.theme.fontWeights.bold};
+
+      @media ${media.tablet} {
+        font-size: ${props => props.theme.fontSizes.xxl};
+      }
     `}
 
   ${({ h3 }) =>
@@ -39,6 +48,10 @@ const Heading = styled.h1`
       css`
         font-size: ${props => props.theme.fontSizes.m};
         font-weight: ${props => props.theme.fontWeights.bold};
+
+        @media ${media.tablet} {
+          font-size: ${props => props.theme.fontSizes.m};
+        }
       `}
 
 `
