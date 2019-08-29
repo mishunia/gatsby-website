@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { media } from '../../../_base/Media'
 
 const FooterStyled = styled.footer`
   width: 100%;
@@ -10,11 +11,12 @@ const FooterInnerStyled = styled.div`
   margin: 0 auto;
   width: 100%;
   max-width: ${({ theme }) => theme.size.inner};
+  padding: 0 ${({ theme }) => theme.gutter.l};
 `
 
 const FooterTopStyled = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.dark2};
 
@@ -23,7 +25,11 @@ const FooterTopStyled = styled.div`
 
 const FooterTopBoxStyled = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+
+  @media ${media.laptop} {
+    justify-content: flex-end;
+  }
 `
 
 const FooterBotStyled = styled.div`

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { media } from '../../_base/Media'
 
 const Input = styled.input`
   border: 1px solid ${({ theme }) => theme.colors.primary};
@@ -10,7 +11,10 @@ const Input = styled.input`
 
   height: 65px;
   width: 100%;
-  max-width: 355px;
+
+  @media ${media.laptop} {
+    max-width: 355px;
+  }
 
   outline: none;
 
@@ -26,6 +30,10 @@ const Input = styled.input`
       border-radius: ${({ theme }) => theme.gutter.xl};
       height: 46px;
       max-width: 100%;
+
+      @media ${media.laptop} {
+        max-width: 100%;
+      }
     `};
 
   ${({ textarea }) =>

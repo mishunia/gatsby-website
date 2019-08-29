@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Input from '../../atoms/Input/Input'
 import Button from '../../atoms/Button/Button'
+import { media } from '../../_base/Media'
 
 const FormStyled = styled.form`
   display: flex;
@@ -19,7 +20,12 @@ const FormRowStyled = styled.div`
 `
 
 const FormRowItemStyled = styled.div`
-  flex: 1;
+  width: 100%;
+  margin-bottom: ${({ theme }) => theme.gutter.l};
+
+  @media ${media.tablet} {
+    flex: 1;
+  }
 `
 
 const FormActionStyled = styled.div`

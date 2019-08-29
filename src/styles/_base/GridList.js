@@ -6,12 +6,18 @@ const GridList = styled.ul`
   flex-wrap: wrap;
 
   padding: 30px 0;
-  margin-right: -10px;
-  margin-left: -10px;
+  /* margin-right: -10px;
+  margin-left: -10px; */
 
   list-style-type: none;
-  width: calc(100% + 20px);
+  width: 100%;
   margin: 0 auto;
+
+  @media ${media.tablet} {
+    margin-right: -10px;
+    margin-left: -10px;
+    width: calc(100% + 20px);
+  }
 
   ${({ grid3 }) =>
     grid3 &&
@@ -20,11 +26,13 @@ const GridList = styled.ul`
 
       ${GridListItem} {
         width: 100%;
+        margin-bottom: ${({ theme }) => theme.gutter.xl}
       }
 
       @media ${media.laptop} {
         ${GridListItem} {
         width: calc(33% - 20px);
+        margin-bottom: 0;
       }
       }
 
@@ -44,13 +52,9 @@ const GridList = styled.ul`
 
       @media ${media.laptop} {
         ${GridListItem} {
-        width: calc(25% - 20px);
+          width: calc(25% - 20px);
+        }
       }
-      }
-
-      /* ${GridListItem} {
-        width: calc(33% - 20px);
-      } */
     `};
 `
 
