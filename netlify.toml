@@ -5,3 +5,7 @@
 [context.storybook]
   command = "yarn build-storybook"
   publish = "storybook"
+
+
+[context.deploy-preview.environment]
+HUGO_VERSION = "0.29"
