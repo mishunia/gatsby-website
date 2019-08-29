@@ -16,30 +16,7 @@ const BlogList = () => (
         sectionHeadDesc="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua2"
       />
       <GridList grid4>
-        <GridListItem>
-          <BlogItem />
-        </GridListItem>
-        <GridListItem>
-          <BlogItem />
-        </GridListItem>
-        <GridListItem>
-          <BlogItem />
-        </GridListItem>
-        <GridListItem>
-          <BlogItem />
-        </GridListItem>
-        <GridListItem>
-          <BlogItem />
-        </GridListItem>
-        <GridListItem>
-          <BlogItem />
-        </GridListItem>
-        <GridListItem>
-          <BlogItem />
-        </GridListItem>
-        <GridListItem>
-          <BlogItem />
-        </GridListItem>
+        <BlogItem />
       </GridList>
     </InnerStyled>
   </SectionStyled>
