@@ -1,7 +1,3 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
-
-// You can delete this file if you're not using it
+// Remove this line and restart the dev server to see
+// that the site loads without the required CSS file
+exports.onRouteUpdate = () => {}
