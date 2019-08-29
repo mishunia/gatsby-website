@@ -5,11 +5,14 @@ const BlogItemStyled = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
   border: 1px solid ${({ theme }) => theme.colors.stone};
+  background: ${({ theme }) => theme.colors.stone};
 `
 const BlogItemMediaStyled = styled.div`
   height: 250px;
   width: 100%;
+  background: #fff;
 
   img {
     width: 100%;
@@ -51,6 +54,7 @@ const BlogItemActionStyled = styled(Link)`
   text-transform: uppercase;
   text-align: center;
   overflow: hidden;
+  margin-top: auto;
 
   &:before {
     content: 'Click';

@@ -20,7 +20,7 @@ const Footer = () => (
     </FooterTopStyled>
     <FooterBotStyled>
       <Paragraph p3 center>
-        @copy2019 Moroz Michał
+        Copyrights
       </Paragraph>
     </FooterBotStyled>
   </FooterStyled>

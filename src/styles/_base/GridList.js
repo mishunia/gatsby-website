@@ -48,7 +48,6 @@ const GridList = styled.ul`
 
       ${GridListItem} {
         width: 100%;
-        height: 100%;
       }
 
       @media ${media.laptop} {

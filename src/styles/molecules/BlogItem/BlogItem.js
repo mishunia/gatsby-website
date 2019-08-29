@@ -39,9 +39,6 @@ const BlogItem = () => (
                 <img src={post.thumb} />
               </BlogItemMediaStyled>
               <BlogItemContentStyled>
-                <BlogItemDateStyled>
-                  <Paragraph p3>{post.date}</Paragraph>
-                </BlogItemDateStyled>
                 <BlogItemTitleStyled>
                   <Heading h4>{post.title}</Heading>
                 </BlogItemTitleStyled>
